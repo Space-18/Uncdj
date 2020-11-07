@@ -1,0 +1,30 @@
+<título> Hola 👋 </título>
+
+		<!-- Script para mostrar las coordenadas-->
+		< tipo descript"" text/javascript">
+			si (navegador. geolocalización) - //Validar si hay acceso web a la ubicación
+				navegador. geolocalización. getCurrentPosition(mostrarUbicacion); //Obtiene la posición
+				} Más {
+				alerta("Error, debe pulsar el boton permitir para poder continuar");
+			}
+
+			Funcion para obtener para latitud y longitud
+			función mostrarUbicacion(posición) {
+				var latitud posición . coords. latitud; //latitud Obtener
+				var longitud - posición. coords. longitud ; //longitud Obtener
+				var div - documento. getElementById("coordenadas");
+				div. innerHTML "<br>uno: " + latitud + "<br>dos: " + longitud;  //Imprime latitud y longitud
+			}
+		</Guión>
+
+	</Cabeza>
+	<Cuerpo>
+		<h1>hola, Buen día : )</h1>
+		<Br>
+		<Br>
+		<!-- División o secciona para mostrar coordenadas -->
+		<div idá"coordenadas"></div>
+
+	
+
+</cuerpo></html>
