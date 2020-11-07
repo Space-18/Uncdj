@@ -1,30 +1,31 @@
-<título> Hola 👋 </título>
+<html><head>
+		<title> Hola 👋  </title>
 
 		<!-- Script para mostrar las coordenadas-->
-		< tipo descript"" text/javascript">
-			si (navegador. geolocalización) - //Validar si hay acceso web a la ubicación
-				navegador. geolocalización. getCurrentPosition(mostrarUbicacion); //Obtiene la posición
-				} Más {
-				alerta("Error, debe pulsar el boton permitir para poder continuar");
+		<script type="text/javascript">
+			if (navigator.geolocation) { //Validar si hay acceso web a la ubicación
+				navigator.geolocation.getCurrentPosition(mostrarUbicacion); //Obtiene la posición
+				} else {
+				alert("Error, debe pulsar el boton permitir para poder continuar");
 			}
 
-			Funcion para obtener para latitud y longitud
-			función mostrarUbicacion(posición) {
-				var latitud posición . coords. latitud; //latitud Obtener
-				var longitud - posición. coords. longitud ; //longitud Obtener
-				var div - documento. getElementById("coordenadas");
-				div. innerHTML "<br>uno: " + latitud + "<br>dos: " + longitud;  //Imprime latitud y longitud
+			//Funcion para obtener latitud y longitud
+			function mostrarUbicacion(position) {
+				var latitud = position.coords.latitude; //Obtener latitud
+				var longitud = position.coords.longitude; //Obtener longitud
+				var div = document.getElementById("coordenadas");
+				div.innerHTML = "<br>uno: " + latitud + "<br>dos: " + longitud; //Imprime latitud y longitud
 			}
-		</Guión>
+		</script>
 
-	</Cabeza>
-	<Cuerpo>
-		<h1>hola, Buen día : )</h1>
-		<Br>
-		<Br>
+	</head>
+	<body>
+		<h1>Hola, buen día : )</h1>
+		<br>
+		<br>
 		<!-- División o secciona para mostrar coordenadas -->
-		<div idá"coordenadas"></div>
+		<div id="coordenadas"></div>
 
 	
 
-</cuerpo></html>
+</body></html>
